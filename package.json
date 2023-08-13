@@ -7,7 +7,7 @@
     "start": "node index.js"
   },
   "author": "THDev",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
     "@discordjs/rest": "^1.6.0",
     "lodash.uniqwith": "^4.5.0",
