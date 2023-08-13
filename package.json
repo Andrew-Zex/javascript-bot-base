@@ -1,0 +1,17 @@
+{
+  "name": "js-bot-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "THDev",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^1.6.0",
+    "lodash.uniqwith": "^4.5.0",
+    "moment": "^2.29.4",
+    "discord.js": "^14.12.1"
+  }
+}
