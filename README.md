@@ -1,1 +1,1 @@
-# typing-you-bot
+# javascript-bot-base
