@@ -1,17 +1,18 @@
-const { Events, InteractionType } = require("discord.js");
+const { Events, InteractionType } = require("discord.js"); //importing functions from discord.js library
 
- module.exports = {
+module.exports = {
 	name: Events.InteractionCreate,
 	execute: async(interaction) => {
-         let client = interaction.client;
-   	 if (interaction.type == InteractionType.ApplicationCommand) {
-   	 if(interaction.user.bot) return;
-	try {
-         const command = client.slashcommands.get(interaction.commandName)
-         command.run(client, interaction)
-	} catch (e) {
-        console.error(e)
-	interaction.reply({content: "Возникла проблема при выполнении команды! Пожалуйста, попробуйте еще раз.", ephemeral: true})
-	}
-	 }
-  }}
+			let client = interaction.client; // getting client
+			if (interaction.type == InteractionType.ApplicationCommand) { //checking event type
+			if(interaction.user.bot) return;
+			try {
+				const command = client.slashcommands.get(interaction.commandName) //getting command name
+				command.run(client, interaction) //running command
+			} catch (e) {
+				console.error(e)
+				interaction.reply({content: "There was a problem when executing the command! Please try again.", ephemeral: true}) //logging error
+			}
+	 	}
+  	}
+} //registering event
